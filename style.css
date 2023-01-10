@@ -9,6 +9,37 @@ body {
     background-color: #131313;
     color: white;
     font-family: 'Inter', sans-serif;
+    height: 100vh;
+}
+
+/*  -------------------- ✨ Animations hero section -------------------- */
+
+.is--active .heading-style-large {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.is--active .text-size-normal {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.is--active .hero_section-image {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* -------------------- ✨ Animations hero section -------------------- */
+
+/* -------------------- Page Elements -------------------- */
+
+
+.section.is--hero {
+    flex-direction: column;
+    justify-content: center;
+    background-color: #252525;
+    color: white;
+    height: 100vh;
 }
 
 .page-wrapper {
@@ -21,11 +52,8 @@ body {
     padding-right: 20px;
     padding-top: 115px;
     padding-bottom: 115px;
-}
-
-.is--hero {
-    background-color: #252525;
-    color: white;
+    height: 100vh;
+    transition-duration: 300ms;
 }
 
 .main-container {
@@ -35,17 +63,57 @@ body {
     margin-right: auto;
 }
 
+/* -------------------- End Page Elements -------------------- */
+
+/* Hero component */
+
 .hero_section-comp {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 5em;
+    align-items: center;
 }
 
 .hero_section-content {
     display: flex;
     flex-direction: column;
+    gap: 1em;
+    align-items: flex-start;
 }
 
+.hero_section-image {
+    border-radius: 1em;
+    min-width: 50%;
+    transform: translateY(60px);
+    opacity: 0;
+    transition-duration: 600ms;
+}
+
+.main-btn {
+    padding: 8px 25px;
+    font-size: 16px;
+    letter-spacing: -0.03em;
+    border-radius: 0.5em;
+    font-weight: 600;
+}
+
+/* -------------------- Typography -------------------- */
+
 .text-size-normal {
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.4;
+    margin-bottom: 25px;
+    transform: translateY(60px);
+    opacity: 0;
+    transition-duration: 500ms;
+}
+
+.heading-style-large {
+    font-size: 48px;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 25px;
+    transform: translateY(60px);
+    opacity: 0;
+    transition-duration: 300ms;
 }
