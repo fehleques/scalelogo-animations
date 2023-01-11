@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 * {
     margin: 0;
     border-style: none;
 }
 
 body {
-    background-color: #131313;
+    background-color: #080808;
     color: white;
     font-family: 'Inter', sans-serif;
     height: 100vh;
@@ -53,23 +58,46 @@ body {
 
 .page-wrapper {
     overflow: hidden;
+    position: relative;
 }
 
 .section {
-    min-height: 60vh;
+    min-height: 100vh;
     display: flex;
+    align-items: center;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 115px;
     padding-bottom: 115px;
+    border-bottom: #55555A30;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.navbar {
+    margin-top: 15px;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+
+.navbar-comp {
+    padding: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(35, 35, 35);
+    border-radius: 1em;
+    box-shadow: 12px -0px 30px -5px #00000A85;
 }
 
 .section.is--hero {
-    margin-left: 5em;
-    margin-right: 5em;
+    margin-left: 3vw;
+    margin-right: 3vw;
     flex-direction: column;
     justify-content: center;
-    background-color: #252525;
+    background-color: #121212;
     color: white;
     height: 60vh;
     border-radius: 0em 0em 1em 1em;
@@ -80,6 +108,7 @@ body {
     max-width: 1140px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 
 /* -------------------- End Page Elements -------------------- */
@@ -106,10 +135,34 @@ body {
     object-fit: cover;
     border-radius: 1em;
     min-width: 50%;
+    box-shadow: 12px 12px 50px -5px #00000A85;
 }
 
-.divider {
+/* .divider {
     height: 1px;
+    width: 80%;
+    background-color: #333333;
+    margin-bottom: 5px;
+    margin-top: 5px;
+} */
+
+.brand-logo {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.nav-link {
+    padding: 5px 10px;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    transition: all;
+    transition-duration: 150ms;
+}
+
+.nav-link:hover {
+    color: yellow;
 }
 
 .main-btn {
@@ -120,11 +173,27 @@ body {
     border-radius: 0.5em;
     font-weight: 600;
     background-color: transparent;
-    border-style: inset;
+    border-style: solid;
     border-color: white;
     transition: all;
     transition-duration: 300ms;
     cursor: pointer;
+}
+
+.main-btn.is--secondary {
+    color: white;
+    padding: 8px 25px;
+    font-size: 16px;
+    letter-spacing: -0.03em;
+    border-radius: 0.5em;
+    font-weight: 600;
+    background-color: #555;
+    border-style: solid;
+    border-color: #555;
+    transition: all;
+    transition-duration: 300ms;
+    cursor: pointer;
+    margin-left: 35px;
 }
 
 .main-btn:hover {
@@ -135,7 +204,6 @@ body {
     border-radius: 0.5em;
     font-weight: 600;
     background-color: white;
-    border-style: inset;
     border-color: white;
     transform: translateY(-8px);
 }
@@ -146,14 +214,28 @@ body {
     font-size: 18px;
     line-height: 1.4;
     margin-bottom: 25px;
+    color: grey;
 }
 
 .heading-style-large {
     font-size: 48px;
     letter-spacing: -0.03em;
     line-height: 1;
-    margin-bottom: 25px;
 }
+
+.heading-style-medium {
+    font-size: 32px;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+}
+
+/* .span-highlight-text {
+    display: inline-block;
+    padding: 1em;
+} */
+
+/* -------------------- End Typography -------------------- */
+
 
 .section_2-comp, .section_3-comp {
     display: flex;
@@ -166,8 +248,9 @@ body {
     flex-direction: row-reverse;
 }
 
-.section_2-content-wrapper, .section_3-content-wrapper {
+.section_2-content-wrapper, .section_3-content-wrapper, .hero_section-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 2em;
 }
