@@ -13,7 +13,7 @@ const observer = new IntersectionObserver(function (entries, observer) {
             entry.target.classList.add("is--active");
 
         } else {
-            
+
             entry.target.classList.remove("is--active");
         };
 
@@ -22,4 +22,13 @@ const observer = new IntersectionObserver(function (entries, observer) {
 
 target.forEach(entries => {
     observer.observe(entries);
+});
+
+//click interactions
+
+
+
+$('.faq_section-item').on('click', function () {
+    $(this).toggleClass('is--clicked');
+    $(this).siblings('.is--clicked').removeClass('is--clicked');
 });

@@ -138,14 +138,6 @@ body {
     box-shadow: 12px 12px 50px -5px #00000A85;
 }
 
-/* .divider {
-    height: 1px;
-    width: 80%;
-    background-color: #333333;
-    margin-bottom: 5px;
-    margin-top: 5px;
-} */
-
 .brand-logo {
     font-size: 25px;
     font-weight: 700;
@@ -217,6 +209,12 @@ body {
     color: grey;
 }
 
+.text-size-small {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
 .heading-style-large {
     font-size: 48px;
     letter-spacing: -0.03em;
@@ -229,10 +227,12 @@ body {
     line-height: 1.1;
 }
 
-/* .span-highlight-text {
-    display: inline-block;
-    padding: 1em;
-} */
+.heading-style-small {
+    font-size: 22px;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    font-weight: 500;
+}
 
 /* -------------------- End Typography -------------------- */
 
@@ -242,6 +242,10 @@ body {
     flex-direction: row;
     gap: 5em;
     align-items: center;
+    background-image: url(./assets/blured-gradient.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    
 }
 
 .section_3-comp {
@@ -253,4 +257,76 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: 2em;
+    
+}
+
+.faq_item-question {
+    padding: 25px 0px 25px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.faq_item-answer {
+    height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    transition: all;
+    transition-duration: 150ms;
+}
+
+.faq_item-answer .text-size-small {
+    text-decoration: none;
+}
+
+.is--clicked .faq_item-answer {
+    height: auto;
+    padding: 25px 0px 0px 0px;
+    opacity: 1;
+    transition: all;
+    transition-duration: 150ms;
+    color: white;
+}
+
+.faq_item-icon {
+    transition: all;
+    transition-duration: 150ms;
+}
+
+.is--clicked .faq_item-icon {
+    transform: rotateZ(135deg);
+}
+
+.faq_section-wrapper {
+    margin-top: 4em;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.faq_section-item {
+    border-bottom: 1px;
+    border-bottom-color: #55555A30;
+    border-bottom-style: solid;
+    cursor: pointer;
+}
+
+.faq_section-item:hover {
+    color: #555;
+}
+
+.faq_section-item:last-child {
+    border-bottom-style: none;
+}
+
+.faq_section-comp {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.faq_section-comp .text-size-normal {
+    max-width: 60ch;
 }
